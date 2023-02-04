@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+ 
+セレクタ {
+    font-family: 'Ubuntu Mono', 'Noto Sans JP' , monospace;
+}
+
+body {
+  margin: 0;
+}
+
+.active-bg {
+  animation: bgcolor 5s forwards;
+  animation-timing-function: linear;
+  display: block;
+  background: #FF0000;
+}
+
+@keyframes bgcolor {
+  0% {
+    background: #FF0000;
+  }
+  10% {
+    background: #FF0000;
+  }
+  90% {
+    background: #FF0000;
+  }
+  100% {
+    background: white;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 56px;
+  font-weight: normal;
+}
+
+main {
+  /* background: #fff; */
+  width: 400px;
+  margin: 16px auto 0;
+  text-align: center;
+  /* outline: 2px solid red; */
+  font-family: 'Ubuntu Mono';
+  position: relative;
+}
+
+
+p {
+  margin: 16px 0 0;
+  background: #ddd;
+  padding: 32px 0;
+  font-size: 48px;
+  font-weight: normal;
+  font-family: "Courier New";
+}
+
+.main button {
+  all: unset;
+  width: 100%;
+  background: #08c;
+  color: #fff;
+  font-family: 'Ubuntu Mono';
+  font-size: 24px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  padding: 24px 0;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.main button:hover {
+  opacity: .6;
+}
+
+.main button:active {
+  opacity: .4;
+}
+
+.main .inactive {
+  background: #ddd;
+  color: #444;
+  cursor: default;
+}
+
+.main .inactive:hover {
+  opacity: 1;
+}
+
+.message {
+  width: 400px;
+  background: #fff;
+  box-shadow: 0 0 8px #999;
+  font-size: 40px;
+  padding:16px 0;
+  border-radius: 4px;
+  font-size: sans-serif;
+  position: absolute;
+  top: 16px;
+  display: none;
+}
+
+.active-message{
+  animation: popup 10s forwards;
+  animation-timing-function: linear;
+  display: block;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(-10px);
+    opacity:0;
+  }
+  10% {
+    transform: none;
+    opacity:1;
+  }
+  90% {
+    transform: none;
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+    pointer-events: none;
+  }
+}
+
+.option {
+  display: flex;
+  gap: 16px;
+}
+
+.option button {
+  all: unset;
+  width: 100%;
+  background: #08c;
+  color: #fff;
+  font-family: 'Ubuntu Mono';
+  font-size: 24px;
+  letter-spacing: .1em;
+  font-weight: bold;
+  padding: 24px 0;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.option button:hover {
+  opacity: .6;
+}
+
+.option button:active {
+  opacity: .4;
+}
+
+.option .inactive {
+  background: #ddd;
+  color: #444;
+  cursor: default;
+}
+
+.option .inactive:hover {
+  opacity: 1;
+}
